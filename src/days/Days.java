@@ -15,21 +15,20 @@ import java.util.Scanner;
  * then print the week day names. 
  *
  * @author sivagamasrinivasan
- jn 22nd
  */
 public class Days {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-         
-    Scanner in =new Scanner(System.in);
-    System.out.println("Enter the day number (one,two,three,four,five) in string");
-    String code = in.next();
-    Weekdays t= new Weekdays();
-    t.nameOfDay(code); 
-    }// TODO code application logic here
+        // Iterate over the enum values and print each day
+        for (Day day : Day.values()) {
+            System.out.println(day);
+        }
+    }
+
+    // Enum defined within the Days class for simplicity
+    public enum Day {
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
+    }
     
     
 }
